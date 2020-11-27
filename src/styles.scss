@@ -1,1 +1,115 @@
 /* You can add global styles to this file, and also import other style files */
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
+
+body {
+  background-color: #FFF;
+  height: 100%;
+  overflow: hidden;
+}
+
+.mat-card {
+  background: #E9EBEF;
+}
+
+.spacer {
+  flex: 1 1 auto;
+}
+
+.mat-raised-button:focus {
+  border: none;
+  outline: none;
+}
+
+.toolbar {
+  position: fixed;
+  z-index: 99;
+  top: 0px;
+}
+
+.content {
+  margin-top: 60px;
+  overflow-y: scroll;
+  position: absolute;
+  height: 90%;
+  padding: 2%;
+}
+
+.mat-toolbar.mat-primary {
+  background: #FFF !important;
+  color: black !important;
+}
+
+.button_login {
+  background: #E9EBEF;
+}
+
+.mat-menu-panel {
+  min-width: 140px !important;
+  border-bottom-left-radius: 20px !important;
+  border-bottom-right-radius: 20px !important;
+  // margin-left: 15px;
+}
+
+.menuItemButton {
+  padding-left: 8px !important;
+  padding-right: 8px !important;
+}
+
+
+.socialAction {
+  cursor: pointer !important;
+  margin-right: 11px !important;
+  margin-top: 11px !important;
+}
+
+.postDataAction {
+  cursor: pointer !important;
+  color: darkslategrey !important;
+}
+
+.postDataActionTitle {
+  cursor: pointer !important;
+  color: darkslategrey !important;
+}
+
+.postDataActionTitle:hover {
+  text-decoration: underline;
+  color: #3f51b5 !important;
+}
+
+.removeMargin {
+  margin-left: 0px !important;
+  margin-right: 0px !important;
+}
+
+.removePadding {
+  padding-left: 0px !important;
+  padding-right: 0px !important;
+}
+
+@media screen and (max-width: 768px) {
+  .homeContent {
+    padding-left: 0% !important;
+    padding-right: 0% !important;
+  }
+
+  .authorInfo {
+    max-width: 70vw !important;
+    min-width: 70vw !important;
+    max-height: 90vh !important;
+  }
+}
+
+.mat-dialog-container {
+  padding: 0px !important;
+}
+
+.float {
+  z-index: 98;
+  position: fixed;
+  bottom: 4rem;
+  right: 5rem;
+  transform: scale(1.7) !important;
+  background-color: #e9ecef;
+  border-radius: 50%;
+}

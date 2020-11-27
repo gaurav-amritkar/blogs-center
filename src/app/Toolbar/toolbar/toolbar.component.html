@@ -1,0 +1,41 @@
+<mat-toolbar color="primary" class="mat-elevation-z8 toolbar">
+  <mat-toolbar-row>
+    <mat-label [routerLink]="['/']" style="cursor: pointer;">Blogs Center</mat-label>
+    <span class="spacer"></span>
+    <button class="button_login" *ngIf="user===undefined" (click)="Login()"
+      style="border-radius: 20px;margin-left:2px;margin-right:2px;" mat-raised-button type="button">
+      <mat-icon>account_circle</mat-icon> Login With Google
+    </button>
+
+    <ng-container *ngIf="user!==undefined">
+      <img mat-card-avatar src={{user.photoURL}} style="margin-right:11px">
+      <button class="button_login" style="border-radius: 20px;margin-left:2px;margin-right:2px;" mat-raised-button
+        [matMenuTriggerFor]="appMenu" type="button">
+        {{user.displayName}}<mat-icon>arrow_drop_down</mat-icon>
+      </button>
+      <!-- <button *ngIf="user!==undefined" [matMenuTriggerFor]="appMenu"
+      style="border-radius: 20px;margin-left:2px;margin-right:2px;" mat-raised-button color="accent" type="button">
+      {{user.displayName}}
+    </button> -->
+      <mat-menu #appMenu="matMenu" class="col-12">
+        <!-- <ng-template matMenuContent> -->
+        <button class="menuItemButton" mat-menu-item [routerLink]="['/blog/add']" routerLinkActive="router-link-active"
+          color="accent" type="button">
+          <mat-icon style="margin-right:10px;">add_circle</mat-icon>Add Post
+        </button>
+        <button class="menuItemButton" mat-menu-item [routerLink]="['/author']" routerLinkActive="router-link-active"
+          color="accent" type="button">
+          <mat-icon style="margin-right:10px;">account_circle</mat-icon>Profile
+        </button>
+        <button mat-menu-item (click)="Logout()" class="menuItemButton" color="accent" type="button">
+          <mat-icon style="margin-right:10px;">logout</mat-icon> Sign Out
+        </button>
+
+        <!-- </ng-template> -->
+      </mat-menu>
+    </ng-container>
+  </mat-toolbar-row>
+</mat-toolbar>
+
+<!-- <div id="firebaseui-auth-container"></div>
+<div id="loader">Loading...</div> -->
