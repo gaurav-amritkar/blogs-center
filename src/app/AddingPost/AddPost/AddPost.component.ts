@@ -46,7 +46,7 @@ export class AddPostComponent implements OnInit, DoCheck {
     authorId: '',
     title: '',
     category: '',
-    content: 'Enter Post Here ...',
+    content: '',
     createdAt: new Date(),
     starCount: 0,
     commentCount: 0
